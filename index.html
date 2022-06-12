@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bubble Plot Visualisation</title>
+    <script src="Code/d3.min.js"></script>
+    <script src="Code/d3.js"></script>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    
+    <div class="container">
+        <div>
+            <h2>Hans Rosling Visualization</h2>
+            <h3>Ravi Kumar Podapati</h3>
+        </div>
+    <div id="svg_chart">
+        <svg width="1000" height="500" stroke="black"></svg>
+    </div>
+    <div>
+        <label class="label" for="slider"></label>
+        Years from 1800 to 2014: <input min=0 max=214 value=0 type="range" id="slider" class="slrange">
+    </div><br>
+    <div>
+        <button class="btncls" onclick="play()" id="animate" value="Play">Animation for all Years</button><br>
+    </div>
+        <div id = "countries"></div><br>
+        <div id= "year">
+        <label for="Continents">Choose a Continent:</label>
+        <select class="dropcls" id="Continents" onchange="dropdownchange(this.id,'country')">
+        <option value="all">All Continents</option>
+        <option value="asia">Asia</option>
+        <option value="americas">North & South Americas</option>
+        <option value="africa">Africa</option>
+        <option value="europe">Europe</option>
+        </select><br>
+    </div>
+    <div>
+        <p><label for="country">Choose Country:</label>
+        <select class="dropcls" id="country" onchange="dropdowncountry(this.id)">
+        </select>
+    </div>
+    <div>
+        <button class="btncls" onclick="reset_country()" id="reset_c">Reset</button>
+    </div>
+</div>
+        <script src="Code/codefile.js"></script>
+</body>
+</html>
