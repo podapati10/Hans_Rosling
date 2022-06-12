@@ -56,7 +56,7 @@ loadData();
 function loadData()
 {
 	Flag='True';
-	d3.json("Dataset/data.json").then(function (data) 
+	d3.json("data.json").then(function (data) 
 { 
 	fdata = data.map(function (year_data) {
 		return year_data["countries"].filter(function (country) {
